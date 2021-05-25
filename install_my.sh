@@ -151,7 +151,7 @@ tracing-enable: false
 tracing-endpoint: 127.0.0.1:6831
 tracing-service-name: bee
 verbosity: 2
-welcome-message: "Hello from Russian Bees https://t.me/ru_swarm"
+welcome-message: "by dixie"
 EOF
 else date "+【%Y-%m-%d %H:%M:%S】 Конфиг файл уже создан" 2>&1 | tee -a $logPath
 fi
@@ -204,7 +204,7 @@ address="0x`cat ~/.bee/keys/swarm.key | jq '.address'|sed 's/\"//g'`" && echo "�
 echo "
 +----------------------------------------------------------------------"
 echo -e " Далее вам нужно пополнить баланс кошелька тестовыми токенами. Переходим по ссылке https://discord.gg/f697tZaZjk , далее переходим в чат #faucet-request и вводим \e[42msprinkle ${address}\e[0m"
-echo -e "Инструкция по пополнению токенами https://telegra.ph/gbzz-geth-02-22"
+echo -e "by dixie"
 echo "
 +----------------------------------------------------------------------"
 echo ''
