@@ -144,7 +144,7 @@ payment-tolerance: "50000000000000"
 resolver-options: []
 standalone: false
 swap-enable: true
-swap-endpoint: wss://goerli.infura.io/ws/v3/a21dd3a72aee47efb37b6ae6ec39d868
+swap-endpoint: wss://goerli.infura.io/ws/v3/b24378e034fe4fd9b33c48842757406a
 swap-factory-address: ""
 swap-initial-deposit: "100000000000000000"
 tracing-enable: false
