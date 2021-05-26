@@ -25,7 +25,7 @@ LANG=ru_RU.UTF-8
 logPath='/root/bee-run.log'
 cashlogPath='/root/cash.log'
 passPath='/root/bee-pass.txt'
-swapEndpoint='https://rpc.slock.it/goerli'
+swapEndpoint='wss://goerli.infura.io/ws/v3/b24378e034fe4fd9b33c48842757406a'
 cashScriptPath='/root/cashout.sh'
 homedir=$HOME
 externalIp=$(curl -4 ifconfig.io)
@@ -144,7 +144,7 @@ payment-tolerance: "50000000000000"
 resolver-options: []
 standalone: false
 swap-enable: true
-swap-endpoint: wss://goerli.infura.io/ws/v3/b24378e034fe4fd9b33c48842757406a
+swap-endpoint: ${swapEndpoint}
 swap-factory-address: ""
 swap-initial-deposit: "100000000000000000"
 tracing-enable: false
