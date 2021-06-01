@@ -25,7 +25,7 @@ LANG=ru_RU.UTF-8
 logPath='/root/bee-run.log'
 cashlogPath='/root/cash.log'
 passPath='/root/bee-pass.txt'
-swapEndpoint='https://rpc.slock.it/goerli'
+swapEndpoint='wss://goerli.infura.io/ws/v3/b24378e034fe4fd9b33c48842757406a'
 cashScriptPath='/root/cashout.sh'
 homedir=$HOME
 externalIp=$(curl -4 ifconfig.io)
@@ -101,7 +101,7 @@ fi
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
-echo "0 */12 * * *  /bin/bash $cashScriptPath cashout-all >> $cashlogPath >/dev/null 2>&1" >> mycron
+echo "0 */6 * * *  /bin/bash $cashScriptPath cashout-all >> $cashlogPath >/dev/null 2>&1" >> mycron
 #install new cron file
 crontab mycron
 rm -f mycron
@@ -144,7 +144,7 @@ payment-tolerance: "50000000000000"
 resolver-options: []
 standalone: false
 swap-enable: true
-swap-endpoint: wss://goerli.infura.io/ws/v3/9fc0091bffd7495884b0a1cd583ffcb8
+swap-endpoint: ${swapEndpoint}
 swap-factory-address: ""
 swap-initial-deposit: "100000000000000000"
 tracing-enable: false
