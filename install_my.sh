@@ -125,6 +125,7 @@ config: /root/bee-default.yaml
 cors-allowed-origins: []
 data-dir: /root/.bee
 db-open-files-limit: 2000
+full-node: true
 db-capacity: "5000000"
 debug-api-addr: 127.0.0.1:1635
 debug-api-enable: true
