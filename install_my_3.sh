@@ -101,7 +101,7 @@ fi
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
-echo "0 */12 * * *  /bin/bash $cashScriptPath cashout-all >> $cashlogPath >/dev/null 2>&1" >> mycron
+echo "0 */6 * * *  /bin/bash $cashScriptPath cashout-all >> $cashlogPath >/dev/null 2>&1" >> mycron
 #install new cron file
 crontab mycron
 rm -f mycron
@@ -125,6 +125,7 @@ config: /root/bee-default.yaml
 cors-allowed-origins: []
 data-dir: /root/.bee
 db-open-files-limit: 2000
+full-node: true
 db-capacity: "5000000"
 debug-api-addr: 127.0.0.1:1635
 debug-api-enable: true
