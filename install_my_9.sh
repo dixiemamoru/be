@@ -127,7 +127,9 @@ data-dir: /root/.bee
 db-open-files-limit: 2000
 full-node: true
 cache-capacity: "5000000"
-debug-api-addr: 127.0.0.1:1635
+db-block-cache-capacity: 201326592
+db-write-buffer-size: 201326592
+debug-api-addr: :1635
 debug-api-enable: true
 gateway-mode: false
 global-pinning-enable: false
@@ -151,7 +153,7 @@ swap-initial-deposit: "100000000000000000"
 tracing-enable: false
 tracing-endpoint: 127.0.0.1:6831
 tracing-service-name: bee
-verbosity: 2
+verbosity: info
 welcome-message: "by dixie"
 EOF
 else date "+【%Y-%m-%d %H:%M:%S】 Конфиг файл уже создан" 2>&1 | tee -a $logPath
